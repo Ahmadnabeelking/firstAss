@@ -1,27 +1,23 @@
 package com.example.firstass;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.firstass.result.result;
-import com.example.firstass.result.resultDa;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 public class MainActivity2 extends AppCompatActivity {
+    private Animation top, bottom;
    RadioButton one,two,three;
     TextView text,qestion;
     LinearLayout image;
     Button btn,btn12;
-    resultDa result = new resultDa();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +30,13 @@ public class MainActivity2 extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         btn12 = findViewById(R.id.go);
         qestion = findViewById(R.id.question);
+        top = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        bottom = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
+
+        one.setAnimation(top);
+        two.setAnimation(top);
+        three.setAnimation(top);
+        btn12.setAnimation(bottom);
 
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override

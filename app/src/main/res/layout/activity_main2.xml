@@ -7,7 +7,6 @@
     android:orientation="vertical"
     android:background="@drawable/back2"
     tools:context=".MainActivity2">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,29 +17,44 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:id="@+id/question"/>
-<RadioGroup
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    >
-   <RadioButton
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="2"
-       android:layout_marginTop="20dp"
-       android:id="@+id/one"
-       />
-    <RadioButton
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/two"
-        android:text="4"/>
-    <RadioButton
+        android:layout_gravity="center"
+        >
+            <RadioButton
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/three"
-        android:text="6"/>
-   </RadioGroup>
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/two"
+            android:text="4"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/three"
+            android:text="6"/>
+    </androidx.cardview.widget.CardView>
+
+
 
     <Button
         android:layout_width="wrap_content"

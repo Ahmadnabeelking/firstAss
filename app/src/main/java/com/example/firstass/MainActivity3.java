@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity3 extends AppCompatActivity {
+    private Animation top, bottom;
     RadioButton one,two,three;
     TextView text;
     LinearLayout image;
@@ -29,6 +32,14 @@ public class MainActivity3 extends AppCompatActivity {
         image = findViewById(R.id.image);
         btn = findViewById(R.id.btn);
         btn12 = findViewById(R.id.go);
+        top = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        bottom = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
+
+        one.setAnimation(top);
+        two.setAnimation(top);
+        three.setAnimation(top);
+        btn12.setAnimation(bottom);
+
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
